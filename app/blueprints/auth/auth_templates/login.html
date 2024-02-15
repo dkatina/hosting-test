@@ -1,0 +1,24 @@
+{%extends "base.html" %}
+
+{%block title%}
+    Login
+{%endblock%}
+
+
+
+{%block content%}
+    {%include './includes/nav.html'%}
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          {{ form.email(class="form-control", id='email')}}
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          {{ form.password(class="form-control", id='password')}}
+        </div>
+        {{ form.submit_btn(class="btn btn-primary")}}
+      </form>
+{% endblock %}
+    
